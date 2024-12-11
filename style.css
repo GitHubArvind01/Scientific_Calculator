@@ -1,0 +1,104 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #e0eafc, #cfdef3);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    user-select: none;
+}
+
+.calculator {
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    overflow: hidden;
+    width: 85%;
+}
+
+.display {
+    background: #0dd316;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+}
+
+.display input {
+    font-weight: 900;
+    width: 100%;
+    border: none;
+    background: none;
+    color: inherit;
+    text-align: right;
+    font-size: 1em;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+
+.btn {
+    background: #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px #b3b3b3, -5px -5px 10px #ffffff;
+    border: none;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:active {
+    box-shadow: inset 5px 5px 10px #b3b3b3, inset -5px -5px 10px #ffffff;
+    background: #d1d1d1;
+    transform: scale(0.95);
+}
+
+.red:active {
+    box-shadow: inset 5px 5px 10px #fa3434, inset -5px -5px 10px #fd1919;
+    background: hsl(0, 100%, 71%);
+    transform: scale(0.95);
+}
+
+.btn:last-child {
+    grid-column: span 2;
+    background: #0d6efd;
+    color: #fff;
+}
+
+.btn:last-child:active {
+    background: #0844b9;
+}
+
+body {
+    user-select: none; /* Modern browsers */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+}
+/* Disable blue highlight on mobile */
+body {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 500px) {
+    .btn {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .display {
+        font-size: 1.5em;
+    }
+}
